@@ -1,14 +1,15 @@
 # coding=utf-8
-# 2023.02.02.00:21
-# 计算出识别到的人脸的特征值的哈希值
+# 2023.04.03.05:01
+# 计算出人廖模型的md5值
 
 import hashlib
 
-def hash_calculate(eigenvalues): # 参数为识别到的人脸的特征值
-    hash = hashlib.md5() # 创建一个md5算法的对象
-    hash.update(bytes(eigenvalues,encoding='utf-8')) # 传入需要加密的字符串
-    md5_value = hash.hexdigest() # 生成md5值
-    return md5_value # 返回计算出的md5值
-
-if __name__ == '__main__':
-    hash_calculate()
+def md5_cal(file_path):
+    md5 = hashlib.md5()
+    with open(file_path, 'rb') as file:
+        while True:
+            data = file.read(4096)   #定义每次读只读4096字节
+            if not data:                  #如果data没有数据了则break
+                break
+            md5.update(data)         #更新数据
+    return md5.hexdigest()
