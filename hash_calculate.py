@@ -1,6 +1,6 @@
 # coding=utf-8
 # 2023.04.03.05:01
-# 计算出人廖模型的md5值
+# 计算出人脸模型的md5值
 
 import hashlib
 
