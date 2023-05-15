@@ -19,7 +19,6 @@ def eigenvalues_calculate(source):
             points.append([x,y])
             cv2.circle(img_gray, (x, y), 5, (50,50,255),cv2.FILLED)
             cv2.putText(img_gray,str(n),(x,y-10),cv2.FONT_HERSHEY_COMPLEX_SMALL,0.8,(0,0,255),1)
-    #     print(points)
     return points
     # cv2.imshow('test',img_gray)
     # cv2.waitKey(0)
