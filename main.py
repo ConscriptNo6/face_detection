@@ -300,8 +300,8 @@ class MainForm(QMainWindow,Ui_FaceDetection):
         db = pymysql.connect( #!加入异常捕获
             host = '127.0.0.1',
             port = 3306,
-            user = 'root',
-            password = '1356105591WYH.',
+            user = '',
+            password = '',
             database = 'face_data',
             charset = 'utf8')
         cursor = db.cursor() # 创建一个游标cursor
